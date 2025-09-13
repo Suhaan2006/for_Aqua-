@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome ♡</h1>
+        <p>Enter the password:</p>
+        <input type="password" id="password" placeholder="A Word That Describes You Best">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error" style="color:red;"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const error = document.getElementById('error');
+            if(password === 'Slay') {
+                window.location.href = 'loading.html';
+            } else {
+                error.textContent = "Wrong password ya silly willy, think again...";
+            }
+        }
+    </script>
+</body>
+</html>
